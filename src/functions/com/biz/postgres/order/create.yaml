@@ -1,10 +1,10 @@
-summary: Create Profile
+summary: Create Order
 tasks:
-  - id: postgres_profile_create
+  - id: postgres_order_create
     fn: com.gs.datastore
     args:
       datasource: postgres
       data:
         data: <% inputs.body %>
       config:
-        method: Profile.create 
+        method: Order.create

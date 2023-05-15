@@ -1,6 +1,6 @@
-summary: Delete Profile
+summary: Fetch Owner
 tasks:
-  - id: postgres_profile_delete
+  - id: postgres_owner_one
     fn: com.gs.datastore
     args:
       datasource: postgres
@@ -8,4 +8,4 @@ tasks:
         where:
           id: <% parseInt(inputs.params.id) %>
       config:
-        method: Profile.delete 
+        method: Owner.findUnique

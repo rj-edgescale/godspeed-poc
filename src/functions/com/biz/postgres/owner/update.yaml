@@ -1,6 +1,6 @@
-summary: Update Profile
+summary: Update Owner
 tasks:
-  - id: postgres_profile_update
+  - id: postgres_owner_update
     fn: com.gs.datastore
     args:
       datasource: postgres
@@ -9,4 +9,4 @@ tasks:
           id: <% parseInt(inputs.params.id) %>
         data: <% inputs.body %>
       config:
-        method: Profile.update
+        method: Owner.update

@@ -1,6 +1,6 @@
-summary: Fetch Profile
+summary: Fetch Category
 tasks:
-  - id: postgres_profile_one
+  - id: postgres_category_one
     fn: com.gs.datastore
     args:
       datasource: postgres
@@ -8,5 +8,4 @@ tasks:
         where:
           id: <% parseInt(inputs.params.id) %>
       config:
-        method: Profile.findUnique
- 
+        method: Category.findUnique

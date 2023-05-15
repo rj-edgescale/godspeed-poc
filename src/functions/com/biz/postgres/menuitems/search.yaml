@@ -1,9 +1,9 @@
-summary: Fetch many Profile
+summary: Fetch many MenuItems
 tasks:
-  - id: postgres_profile_search
+  - id: postgres_menuitems_search
     fn: com.gs.datastore
     args:
       datasource: postgres
       data: <% inputs.body %>
       config:
-        method: Profile.findMany
+        method: MenuItems.findMany
