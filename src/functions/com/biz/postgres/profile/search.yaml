@@ -1,0 +1,9 @@
+summary: Fetch many Profile
+tasks:
+  - id: postgres_profile_search
+    fn: com.gs.datastore
+    args:
+      datasource: postgres
+      data: <% inputs.body %>
+      config:
+        method: Profile.findMany

@@ -1,0 +1,16 @@
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated-clients/postgres"
+  previewFeatures = ["metrics"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:8LXLhXcM24BJKQxS6ia7@containers-us-west-207.railway.app:5813/railway"
+}
+
+model Profile {
+  id     Int    @id @default(autoincrement())
+  bio    String
+}

@@ -1,0 +1,32 @@
+'/greet.http.post': # event id. Will include path params. For ex. com.abc.do_kyc/{bank_id}/process/{user_id}
+  fn: com.jfs.greet
+  summary: greet thread
+  description: print greet user
+  produces:
+    - application/json 
+  # parameters:
+  #   - name: status
+  #     in: query
+  #     schema: 
+  #       type: string
+  responses:
+    '200':
+      description: Returns the greeting.
+      schema:
+        type: string
+    '400':
+      description: Invalid status value
+  body:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: 'object'
+          required: [name]
+          properties:
+            name:
+              type: string
+            # dob:  { type : 'string', format : 'date', pattern : "[0-9]{4}-[0-9]{2}-[0-9]{2}" }
+            # meta:
+            #   type: 'object'
+

@@ -1,0 +1,5 @@
+Profile:
+  type: object
+  properties:
+    bio:
+      type: string

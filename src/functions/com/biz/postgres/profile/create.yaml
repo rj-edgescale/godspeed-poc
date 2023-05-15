@@ -1,0 +1,10 @@
+summary: Create Profile
+tasks:
+  - id: postgres_profile_create
+    fn: com.gs.datastore
+    args:
+      datasource: postgres
+      data:
+        data: <% inputs.body %>
+      config:
+        method: Profile.create 
