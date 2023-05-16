@@ -2,7 +2,6 @@ summary: Fetch many Restaurant
 tasks:
   - id: postgres_restaurant_search
     fn: com.gs.datastore  
-    condition: <%Coffee 'code' in inputs.body %>
     args: 
       datasource: postgres
       data: 
